@@ -1,0 +1,49 @@
+{
+    "name": "kaphein-js-signal",
+    "version": "0.1.0",
+    "description": "A waitable object for Javascript based on ECMAScript 6 Promise.",
+    "author": "Hydrawisk793 <hyw793@gmail.com>",
+    "license": "MIT",
+    "main": "dist/index.js",
+    "types": "dist/index.d.ts",
+    "files": [
+        "dist"
+    ],
+    "keywords": [
+        "javascript",
+        "signal",
+        "wait",
+        "promise"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Hydrawisk793/kaphein-js-signal.git"
+    },
+    "bugs": {
+        "url": "https://github.com/Hydrawisk793/kaphein-js-signal/issues"
+    },
+    "homepage": "https://github.com/Hydrawisk793/kaphein-js-signal#readme",
+    "scripts": {
+        "lint": "tsc --project tsconfig.dts.json && eslint src/**/*.js",
+        "lint:fix": "npm run lint -- --fix",
+        "test": "mocha tests/index.test.js",
+        "build": "rm -rf dist && npm run lint && npm run test && webpack --mode production --config webpack.config.js",
+        "prepack": "npm install && npm run build"
+    },
+    "bundledDependencies": [],
+    "dependencies": {
+        "kaphein-js-object-utils": "~0.1.0",
+        "kaphein-js-type-trait": "~0.2.0"
+    },
+    "devDependencies": {
+        "chai": "^4.3.4",
+        "copy-webpack-plugin": "^8.1.1",
+        "eslint": "^7.24.0",
+        "husky": "^2.7.0",
+        "mocha": "^8.3.2",
+        "typescript": "^4.2.4",
+        "webpack": "^5.33.2",
+        "webpack-cli": "^4.6.0",
+        "webpack-node-externals": "^2.5.2"
+    }
+}
