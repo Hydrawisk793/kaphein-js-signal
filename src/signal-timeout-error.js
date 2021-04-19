@@ -21,6 +21,7 @@ module.exports = (function ()
                 Error.captureStackTrace(this, SignalTimeoutError);
             }
         },
+        null,
         {}
     );
 
